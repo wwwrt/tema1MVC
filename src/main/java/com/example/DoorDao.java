@@ -17,7 +17,7 @@ public class DoorDao {
 		
 
 		while (rs.next()) {
-			Door d = new Door(rs.getInt(id), rs.getString("material"), rs.getDouble("height"), rs.getDouble("width"), null);
+			Door d = new Door(rs.getInt("id"), rs.getString("material"), rs.getDouble("height"), rs.getDouble("width"), rs.getDate("installationDate").toLocalDate());
 			DBHelper.closeConnection();
 			return d;
 		}

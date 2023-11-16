@@ -19,7 +19,7 @@ public class DBHelper {
 			Properties connectionProps = new Properties();
 			connectionProps.put("user", "root");
 			connectionProps.put("password", "");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/doors", connectionProps);
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/woods", connectionProps);
 		}
 
 		return conn;

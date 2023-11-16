@@ -15,13 +15,10 @@ public class DoorController {
 	@GetMapping("/doors/{id}")
 	public ModelAndView watchPageById(@PathVariable int id) throws SQLException {
 
-		ModelAndView mav = new ModelAndView("singleDoor");
+		ModelAndView mav = new ModelAndView("single-door");
 		// get the watch from db
-		Door door = doorDao.getById(id);
-		System.out.println(door.getHeight() + " " + door.getWidth());
-		
-		// set it in the page
-		
+		Door door = doorDao.getById(id);	
+		// set it in the page	
 		mav.addObject ("do", door);
 		
 		

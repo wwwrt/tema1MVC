@@ -16,8 +16,11 @@ Door d = (Door)request.getAttribute("do");
 %>
 <% if (d!=null) { %>
 <p>Watch id: <%= d.getId() %> </p>
+<p>Watch material: <%= d.getMaterial() %> </p>
 <p>Watch height: <%= d.getHeight()%> </p>
 <p>Watch width: <%= d.getWidth()%> </p>
+<p>Watch installation date: <%= d.getInstallationDate() %> </p>
+
 <%} %>
 
 </body>
