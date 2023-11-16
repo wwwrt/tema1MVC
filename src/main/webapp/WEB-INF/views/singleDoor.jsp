@@ -9,15 +9,15 @@
 </head>
 <body>
 
-<h1>Single Watch Page</h1>
+<h1>Single Door Page</h1>
 
 <%
-Door w = (Door)request.getAttribute("wa");
+Door d = (Door)request.getAttribute("do");
 %>
-<% if (w!=null) { %>
-<p>Watch id: <%= w.getId() %> </p>
-<p>Watch brand: <%= w.getBrand() %> </p>
-<p>Watch price: <%= w.getPrice() %> </p>
+<% if (d!=null) { %>
+<p>Watch id: <%= d.getId() %> </p>
+<p>Watch height: <%= d.getHeight()%> </p>
+<p>Watch width: <%= d.getWidth()%> </p>
 <%} %>
 
 </body>
