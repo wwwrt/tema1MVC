@@ -19,7 +19,7 @@
 <%  numberOfDoors = 0; %>
 <% } %>
 
-<p> Number of watches: <%= numberOfDoors %></p>
+<p> Number of doors: <%= numberOfDoors %></p>
 
 <table border="1">
 	<tr>
@@ -40,6 +40,8 @@
 		</tr>
 	<% } %>	
 </table>
+
+<p><a href="dooors/create">Create</a> </p>
 
 </body>
 </html>

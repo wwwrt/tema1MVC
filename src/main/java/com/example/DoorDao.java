@@ -27,7 +27,7 @@ public class DoorDao {
 		return null;
 	}
 	
-	public ArrayList<Door> getAllDoors() throws SQLException {
+	public static ArrayList<Door> getAllDoors() throws SQLException {
 		Connection con = DBHelper.getConnection();
 		String query = "select * from doors";
 		
@@ -44,4 +44,15 @@ public class DoorDao {
 		return doors;
 	}
 
+	public void insertDoor (Door doorParam) throws SQLException {
+		Connection con = DBHelper.getConnection();
+		String query = "insert into doors (material, height, width) values (??)";
+		PreparedStatement prepStmt = con.prepareStatement (query);
+		
+		prepStmt.setString(1, doorParam.getMaterial());
+		prepStmt.setDouble(2, doorParam.getHeight());
+		prepStmt.setDouble(3, doorParam.getWidth());
+		
+		prepStmt.executeUpdate();
+	}
 }
